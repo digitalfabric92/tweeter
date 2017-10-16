@@ -5,6 +5,8 @@
  */
 html {
   box-sizing: border-box;
+  font-family: "Roboto Condensed:700", sans-serif;
+  /*height: 100%;*/
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -14,10 +16,86 @@ html {
  * Global layout stuff
  */
 
+/* Added menu bar style changes */
+nav#nav-bar {
+  background-color: #00A087;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+#nav-bar .logo {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#nav-bar .header {
+  color: #e8fdff;
+  margin-left: 10px;
+  margin-top: 0;
+  margin-bottom: 0px;
+  font-weight: 100;
+  float: left;
+  font-size: 36px;
+  line-height: 76px;
+}
+
 body {
   margin: 0;
   color: #244751;
   background-color: #eee;
+  margin-top: 0;
+}
+
+main {
+  width: 450px;
+  background-color: white;
+  margin: 0 auto;
+  /*height: 100%;*/
+  padding-top: 3em;
+}
+
+h2 {
+  margin-top: 0;
+  border-bottom: 0.05em solid black;
+  /*border-bottom-width: 425px;*/
+}
+
+.new-tweet {
+  background-color: #EEE;
+  border: 1px solid #c0c0c0;
+  border-radius: 7px;
+  /*margin: top left bottom right */
+  margin: 0 2em;
+  padding: 1em;
+}
+
+.new-tweet textarea{
+  width: 100%;
+  padding: 0.5em;
+}
+
+.new-tweet input{
+  float: left;
+}
+
+.counter{
+  float: right;
+}
+
+.characters{
+  color: #EEE;
+  height: 0px;
+}
+
+.container {
+  height: 720px;
 }
 
 /*
