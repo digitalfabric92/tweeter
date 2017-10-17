@@ -87,6 +87,7 @@ h2 {
 
 .counter{
   float: right;
+  font-style: italic;
 }
 
 .characters{
@@ -101,3 +102,13 @@ h2 {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+.warning {
+  color: yellow;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
