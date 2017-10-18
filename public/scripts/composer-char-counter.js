@@ -11,6 +11,7 @@ $(function () {
         counter.text(charsN);
 
         if (charsN < 0) { // Error when no chars remaining
+            // Add class to the counter element
             counter.addClass('error')
             counter.removeClass('warning')
         } else {
