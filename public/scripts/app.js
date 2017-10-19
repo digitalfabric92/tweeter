@@ -55,9 +55,6 @@ $(document).ready(function() {
     ];
 
 
-
-
-
 // Create a function that creates the element
 function createTweetElement(tweet) {
 
@@ -118,11 +115,26 @@ renderTweets(data);
 
 
 //
-// function
+// LOAD TWEETS
 //
-//     $.ajax({
 
 
+function loadTweets(){
+    $.ajax({
+        url: '/tweets',
+        method: 'GET',
+        // success: renderTweets(response);
+        success: function ($tweets) {
+            $('.all-tweets').empty()
+            renderTweets($tweets);
+        }
+    })
+}
+loadTweets();
+
+//
+// POST TWEET
+//
 $('.new-tweet form').submit(function(event) {
         console.log("Event Submitted")
         event.preventDefault();
@@ -130,33 +142,16 @@ $('.new-tweet form').submit(function(event) {
         $.ajax({
             url: '/tweets/',
             method: 'POST',
+            // let serData = $( this ).serialize(),
             data: $( this ).serialize(),
-            success: function ($tweets) {
-
-                $( this ).serialize();
-             // this refers to the '.new-tweet form' selector
-             console.log("Serialized");
+            success: function () {
+                // this refers to the '.new-tweet form' selector
+             console.log("SERIAL");
             }
 
         })
 
 })
-
-function loadTweets(){
-    $.ajax({
-        url: '/tweets/',
-        method: 'GET',
-        success: function ($tweets) {
-            $('.all-tweets').empty()
-            renderTweets($tweets)
-        }
-    })
-}
-
-    // $( "form" ).submit(function( event ) {
-    //
-    //     console.log()
-
 
 });
 
