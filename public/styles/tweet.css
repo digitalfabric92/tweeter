@@ -17,14 +17,13 @@
     /*margin-right: 10px;*/
 }
 
-.all-tweets {
+article {
     margin-left: 2em;
     margin-right: 2em;
     margin-bottom: 20px;
     margin-top: 20px;
     border: 1px solid gray;
     border-radius: 7px;
-    /*opacity: 0.9;*/
 }
 
 section.all-tweets article {
@@ -38,11 +37,6 @@ section.all-tweets article:hover{
 section.all-tweets article:hover * {
     opacity: 1;
 }
-
-/*#all-tweets article:hover header {*/
-    /*color: #244751;*/
-    /*background-color: #eeeeee;*/
-/*}*/
 
 article p {
     display: inline-block;
@@ -77,6 +71,7 @@ header .handle {
     display: inline-block;
     float: right;
     margin: auto;
+    padding: 7px;
 }
 
 .clearfix::after {
@@ -89,25 +84,3 @@ header .handle {
     float: left;
     margin-top: 0.1em;
 }
-
-/*article header img {*/
-/*width: 68px;*/
-/*height: 68px;*/
-/*border-radius: 6px;*/
-/*float: left;*/
-/*margin: auto 12px auto 0;*/
-/*}*/
-
-/*#all-tweets article header {*/
-/*border: 0;*/
-/*border-top-left-radius: 15px;*/
-/*border-top-right-radius: 15px;*/
-/*height: 80px;*/
-/*padding: 6px;*/
-/*}*/
-
-/*.tweet-footer p {*/
-/*margin: 8px 0 8px 0.5em;*/
-/*display: inline-block;*/
-/*float: left;*/
-/*}*/
