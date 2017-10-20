@@ -7,9 +7,9 @@ Tweeter is a communication app that allows users to post their thoughts, or twee
 This app also occasionally predicts the future.
 
 ## Screenshots
-!["tweets"](https://github.com/digitalfabric92/public/images/tweets.png?raw=true)
-!["compose"]
-!["longtweet"]
+!["tweets"](https://github.com/digitalfabric92/tweeter/blob/master/tweets.png?raw=true)
+!["compose"](https://github.com/digitalfabric92/tweeter/blob/master/compose.png?raw=true)
+!["longtweet"](https://github.com/digitalfabric92/tweeter/blob/master/longtweet.png?raw=true)
 
 ## Getting Started
 
