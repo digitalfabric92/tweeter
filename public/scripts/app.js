@@ -83,6 +83,7 @@ function loadTweets(){
         method: 'GET',
         // success: renderTweets(response);
         success: function ($tweets) {
+            // Clears the all tweets array file
             $('.all-tweets').empty()
             renderTweets($tweets);
         }
@@ -96,20 +97,26 @@ loadTweets();
 $('.new-tweet form').submit(function(event) {
         console.log("Event Submitted")
         event.preventDefault();
+        // if
+        // else if
+        // else
 
-        $.ajax({
-            url: '/tweets/',
-            method: 'POST',
-            // let serData = $( this ).serialize(),
-            data: $( this ).serialize(),
-            success: function (tweet) {
-                // this refers to the '.new-tweet form' selector
-             //console.log(tweet);
-             renderTweets([tweet]);
 
-            }
 
-        })
+            $.ajax({
+                url: '/tweets/',
+                method: 'POST',
+                // let serData = $( this ).serialize(),
+                data: $(this).serialize(),
+                success: function (tweet) {
+                    // this refers to the '.new-tweet form' selector
+                    //console.log(tweet);
+                    renderTweets([tweet]);
+
+                }
+
+            })
+
 
 })
 
