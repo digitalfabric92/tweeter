@@ -101,9 +101,15 @@ $('.new-tweet form').submit(function(event) {
         // if
         // else if
         // else
-
-
-
+        let tweetContent = $(this).find("textarea").val();
+        if (tweetContent === "") {
+            let $emptyTweetErr = $("<p>").text("Write something!").css("color", "red");
+            $("#errors").append($emptyTweetErr);
+        } else if ($(".counter").text() < 0){
+            let $counterTweetErr = $("<p>").text("Less than 280 characters!").css("color", "red");
+            $("#errors").append($counterTweetErr);
+        } else {
+            $("#errors").empty();
             $.ajax({
                 url: '/tweets/',
                 method: 'POST',
@@ -117,6 +123,8 @@ $('.new-tweet form').submit(function(event) {
                 }
 
             })
+
+        }
 
 
 })
@@ -163,21 +171,3 @@ $('.new-tweet form').submit(function(event) {
     // }
 
 });
-
-
-// Declare the different parts of HTML
-// Class - More advanced way
-
-// Hidden element
-// Index -->
-
-// Declare all the different parts before appending them.
-// Avatar user name
-// Append name to header
-
-// jQuery create the article
-// Nested them in
-
-// ============
-// Take the template and clone it and change all the text in the box
-
