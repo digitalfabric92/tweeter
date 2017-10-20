@@ -1,0 +1,87 @@
+.flag, .retweet, .love {
+    height: 17px;
+    width: 17px;
+    float: right;
+    opacity: 0;
+    margin-top: 0.1em;
+    margin-right: 0.2em;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    float: left;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0.3em;
+    /*margin-right: 10px;*/
+}
+
+article {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid gray;
+    border-radius: 7px;
+}
+
+section.all-tweets article {
+    opacity: 0.9;
+}
+
+section.all-tweets article:hover{
+    opacity: 1;
+}
+
+section.all-tweets article:hover * {
+    opacity: 1;
+}
+
+article p {
+    display: inline-block;
+    margin: 8px;
+    height: 80px;
+    padding: 0.5em;
+}
+
+footer {
+    border-top: 2px solid #eee;
+    height: 32px;
+    font-size: 16px;
+    position: relative;
+}
+
+header {
+    background-color: #F3F3F3;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+header .username {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    float: left;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+header .handle {
+    display: inline-block;
+    float: right;
+    margin: auto;
+    padding: 7px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.date{
+    float: left;
+    margin-top: 0.1em;
+    margin-left: 0.4em;
+}
