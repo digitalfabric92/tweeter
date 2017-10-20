@@ -1,8 +1,15 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+There is no other app like this on the internet or in the entire universe.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+Tweeter is a communication app that allows users to post their thoughts, or tweets for others to read.
+
+This app also occasionally predicts the future.
+
+## Screenshots
+!["tweets"](https://github.com/digitalfabric92/public/images/tweets.png?raw=true)
+!["compose"]
+!["longtweet"]
 
 ## Getting Started
 
@@ -15,3 +22,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- Chance
+- Express
+- Md5
+- MongoDB
+- Node-Sass-Middleware

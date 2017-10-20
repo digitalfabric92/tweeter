@@ -31,7 +31,8 @@ $(document).ready(function() {
 
           <!--Tweet footer-->
           <footer class="clearfix">
-            <div class="date">10 days ago</div>
+            <div class="date">${moment(moment(tweet.created_at).format()).fromNow()}</div>
+            <!--moment("20111031", "YYYYMMDD").fromNow()-->
             <div class="icons">
               <img src="images/love.png" class="love">
               <img src="images/re.png" class="retweet">
@@ -119,6 +120,26 @@ $('.new-tweet form').submit(function(event) {
 
 
 })
+
+// =================================================================================
+// Compose button toggle
+// =================================================================================
+
+    $("#compose").on("click", function(){
+        var $textarea = $("#user-form").find("textarea");
+        $(".new-tweet").slideToggle("fast");
+        $textarea.select();
+    });
+
+// =================================================================================
+// ESCAPE XSS
+// =================================================================================
+
+    var escapeXSS = function (str) {
+        var div = document.createElement("div");
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    }
 
 // =================================================================================
 // Form Validation

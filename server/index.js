@@ -7,22 +7,23 @@ const bodyParser    = require("body-parser");
 const app           = express();
 const MongoClient = require("mongodb").MongoClient;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/tweeter";
-//const sassMiddleware = require("node-sass-middleware");
-//const path = require("path");
+const sassMiddleware = require("node-sass-middleware");
+// const path = require("path");
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
 
 // SASS Middleware
-// app.use(sassMiddleware({
-//     /* Options */
-//     src: __dirname,
-//     dest: path.join(__dirname, 'public'),
-//     debug: true,
-//     outputStyle: 'compressed',
-//     prefix:  '/prefix'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
-// }));
-//app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use(sassMiddleware({
+    /* Options */
+    src: "./scss",
+    dest: "./public/styles/",
+    debug: true,
+    outputStyle: 'compressed',
+    prefix:  '/styles'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
+}));
+
+app.use(express.static("public"));
+
 
 // The in-memory database of tweets. It's a basic object with an array in it.
 // const db = require("./lib/in-memory-db");
